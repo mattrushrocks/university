@@ -1,0 +1,29 @@
+/* NAVIGATION STUFF GOES HERE  */
+body{
+    display: block;
+}
+#top a, #navlinks > a{
+    display: none;
+}
+#top a.logo {
+    display: block;
+}
+nav{
+    height: auto;
+    border-bottom: 2px solid $greyColor ;
+    ul{
+        display: flex;
+        justify-content: space-evenly;
+    }
+    li a{
+        border: none;
+    }
+    li a:hover{
+        background-color: #eee;
+    }
+    li.active a{
+        text-decoration: underline 3px;
+        color: $primaryColor;
+        text-decoration-color: $secondaryColor ;
+    }
+}
