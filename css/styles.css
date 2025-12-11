@@ -312,34 +312,36 @@ html {
 }
 
 /* --------------------------- BODY --------------------------- */
+/* --------------------------- BODY --------------------------- */
 body {
-  font-family: "Barlow", sans-serif; /* switched to Barlow */
+  font-family: "Orbitron", "Raleway", sans-serif; /* Futuristic academic vibe */
   font-weight: 300;
   min-width: 320px;
   display: grid;
+  background-color: #ffffff; /* Professional white background */
+  color: #0B0C10; /* Dark text for readability */
 }
 
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  border-bottom: 1px solid #ccc;
+  border-bottom: 2px solid #0E203B; /* Dark blue accent */
+  background-color: #ffffff; /* Clean header */
 }
 
 header {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: 60px auto 44px;
+  column-gap: 30px;
   align-items: center;
-  column-gap: 1rem;
   padding: 0.5rem 10px;
+  margin-bottom: 1rem;
 }
-
-header .logo {
-  margin: 0;
-}
-
 header span {
   font-size: 1.6rem;
-  font-weight: 500;
-  color: #1E3A8A; /* deep blue */
+  font-weight: 600;
+  color: #0B0C10; /* Professional dark text */
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 /* --------------------------- NAVIGATION --------------------------- */
@@ -353,7 +355,7 @@ div#navWrapper {
   font-size: 1.6rem;
   height: 44px;
   text-decoration: none;
-  color: #1E3A8A; /* deep blue */
+  color: #0B0C10; /* Neutral professional text */
 }
 
 #top a {
@@ -366,6 +368,7 @@ div#navWrapper {
 
 nav {
   height: 100vh;
+  background-color: #ffffff; /* White background */
 }
 nav ul {
   list-style-type: none;
@@ -374,63 +377,47 @@ nav ul {
 }
 nav li a {
   display: block;
-  color: #2563EB; /* medium blue */
+  color: #0B0C10;
   padding: 0.9rem 2vw;
   text-decoration: none;
   text-align: right;
   border-bottom: 1px solid #ccc;
 }
 nav li.active a {
-  color: #0E203B; /* navy */
+  color: #0E203B; /* Dark blue highlight */
+  font-weight: 700;
 }
 
 /* --------------------------- MAIN --------------------------- */
-main {
-  display: grid;
-  place-items: center; /* centers form horizontally & vertically */
-  padding: 2rem 1rem;
-}
-
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
-  font-size: 1.5rem;
-  color: #0E203B; /* navy */
-  font-weight: 300;
+  font-size: 1.8rem;
+  color: #0B0C10;
+  font-weight: 600;
+  text-transform: uppercase;
 }
 main p {
   padding: 0.5rem 10px;
   color: #333;
-  line-height: 150%;
+  line-height: 160%;
 }
 
 /* --------------------------- FORM --------------------------- */
 form.myForm {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* two-column layout */
-  gap: 1rem 2rem;
-  max-width: 960px;
-  width: 100%; /* fills available width */
-  background-color: #f9f9fb;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  margin: 1rem 10px;
 }
-
 form.myForm label {
   display: block;
-  font-size: 0.8rem;
-  color: #0E203B; /* navy */
+  font-size: 0.9rem;
+  color: #0B0C10;
   padding: 0.25rem;
 }
-
 form.myForm h3 {
-  grid-column: 1 / -1; /* headings span both columns */
-  font-size: 0.9rem;
-  color: #2563EB; /* medium blue */
+  font-size: 1rem;
+  color: #0E203B; /* Dark blue section headers */
   margin: 1.5rem 0 0.25rem 0;
   border-bottom: 1px solid #eee;
 }
-
 form.myForm input[type=text],
 form.myForm input[type=tel],
 form.myForm input[type=number],
@@ -441,47 +428,48 @@ form.myForm select {
   margin: 0.1rem 0 1rem 0;
   padding: 0.5rem 10px;
   font-size: 1rem;
-  color: #444;
-  width: 100%; /* fills column width */
+  color: #0B0C10;
+  width: 250px;
   border: 1px solid #999;
   border-radius: 3px;
+  background-color: #ffffff;
 }
-
 form.myForm input[type=submit] {
-  grid-column: 1 / -1; /* button spans both columns */
   border: none;
   border-radius: 10px;
-  background-color: #1E3A8A; /* deep blue button */
+  background-color: #0E203B; /* Dark blue button */
   font-weight: 700;
-  color: white;
+  color: #ffffff;
   padding: 1rem;
   appearance: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-
 form.myForm input:required {
-  border: 1px solid #ff0033;
+  border: 1px solid #FF0033; /* Red for required fields */
 }
 form.myForm input:focus {
-  border: 3px solid #2563EB; /* focus highlight blue */
+  border: 3px solid #0E203B; /* Dark blue focus */
 }
 form.myForm input:required:valid {
-  border: 1px solid #1E3A8A; /* valid input border blue */
+  border: 1px solid #0E203B; /* Dark blue valid field */
 }
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #1E3A8A; /* deep blue footer */
+  background-color: #ffffff;
+  border-top: 2px solid #0E203B; /* Dark blue accent */
 }
 
 footer {
   font-size: 0.85rem;
   padding: 1rem 10px;
-  color: white;
+  color: #0B0C10;
   text-align: center;
   line-height: 150%;
 }
 footer a {
-  color: #93C5FD; /* light blue links */
+  color: #0E203B; /* Dark blue links */
 }
 
 /* --------------------------- MEDIA QUERIES --------------------------- */
@@ -494,10 +482,11 @@ footer a {
   }
   #top a.logo {
     display: block;
+    color: #0B0C10;
   }
   nav {
     height: auto;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #0E203B; /* Dark blue */
   }
   nav ul {
     display: flex;
@@ -507,15 +496,15 @@ footer a {
     border: none;
   }
   nav li a:hover {
-    background-color: #E0F2FE; /* light blue hover */
+    background-color: #f9f9f9;
+    color: #0E203B; /* Dark blue hover */
   }
   nav li.active a {
     text-decoration: underline 3px;
-    color: #1E3A8A;
-    text-decoration-color: #2563EB;
+    color: #0E203B; /* Dark blue */
+    text-decoration-color: #0E203B;
   }
 }
-
 @media only screen and (min-width: 64rem) {
   header, nav, main {
     max-width: 960px;
@@ -526,17 +515,10 @@ footer a {
   }
   nav {
     height: auto;
-    border-bottom: 2px solid #ccc;
+    border-bottom: 2px solid #0E203B; /* Dark blue */
   }
   nav ul {
     display: flex;
     justify-content: right;
-  }
-}
-
-/* Responsive form collapse */
-@media only screen and (max-width: 600px) {
-  form.myForm {
-    grid-template-columns: 1fr; /* single-column layout */
   }
 }
