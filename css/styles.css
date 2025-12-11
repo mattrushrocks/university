@@ -312,39 +312,37 @@ html {
 }
 
 /* --------------------------- BODY --------------------------- */
-/* --------------------------- BODY --------------------------- */
+html, body {
+        overflow-x: hidden; /* Prevent horizontal scroll */
+      }
 body {
-  font-family: "Orbitron", "Raleway", sans-serif; /* Futuristic academic vibe */
+  font-family: "Raleway", sans-serif;
   font-weight: 300;
   min-width: 320px;
   display: grid;
-  background-color: #ffffff; /* Professional white background */
-  color: #0B0C10; /* Dark text for readability */
 }
 
 /* --------------------------- HEADER --------------------------- */
 #headerWrapper {
-  border-bottom: 2px solid #0E203B; /* Dark blue accent */
-  background-color: #ffffff; /* Clean header */
+  border-bottom: 1px solid #ccc;
 }
 
 header {
   display: grid;
-  grid-template-columns: 60px auto 44px;
-  column-gap: 30px;
+  grid-template-columns: 80px auto 44px;
+  -moz-column-gap: 10px;
+       column-gap: 10px;
   align-items: center;
   padding: 0.5rem 10px;
   margin-bottom: 1rem;
 }
 header span {
   font-size: 1.6rem;
-  font-weight: 600;
-  color: #0B0C10; /* Professional dark text */
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-weight: 300;
+  color: #1c0e75;
 }
 
-/* --------------------------- NAVIGATION --------------------------- */
+/* --------------------------- NAVIGATION STUFF GOES HERE --------------------------- */
 div#navWrapper {
   grid-row: 4;
 }
@@ -355,7 +353,7 @@ div#navWrapper {
   font-size: 1.6rem;
   height: 44px;
   text-decoration: none;
-  color: #0B0C10; /* Neutral professional text */
+  color: #333;
 }
 
 #top a {
@@ -368,7 +366,6 @@ div#navWrapper {
 
 nav {
   height: 100vh;
-  background-color: #ffffff; /* White background */
 }
 nav ul {
   list-style-type: none;
@@ -377,29 +374,52 @@ nav ul {
 }
 nav li a {
   display: block;
-  color: #0B0C10;
+  color: #34079c;
   padding: 0.9rem 2vw;
   text-decoration: none;
   text-align: right;
   border-bottom: 1px solid #ccc;
 }
 nav li.active a {
-  color: #0E203B; /* Dark blue highlight */
-  font-weight: 700;
+  color: #0E203B;
 }
+/* Base hamburger style */
+.hamburger {
+  font-size: 2rem;       /* makes the ☰ icon bigger */
+  text-decoration: none; /* remove underline */
+  color: #333;           /* adjust to match your theme */
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+/* Show hamburger only on small screens */
+.hamburger {
+  display: inline-block;
+}
+
+@media (min-width: 768px) {
+  .hamburger {
+    display: none; /* hide hamburger on tablets & desktops */
+  }
+
+  #navlinks {
+    display: flex; /* show full nav on larger screens */
+    position: static;
+  }
+}
+
 
 /* --------------------------- MAIN --------------------------- */
 main h1 {
   padding: 1rem 10px 0.5rem 10px;
-  font-size: 1.8rem;
-  color: #0B0C10;
-  font-weight: 600;
-  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #0E203B;
+  font-weight: 300;
 }
 main p {
   padding: 0.5rem 10px;
   color: #333;
-  line-height: 160%;
+  line-height: 150%;
 }
 
 /* --------------------------- FORM --------------------------- */
@@ -408,13 +428,13 @@ form.myForm {
 }
 form.myForm label {
   display: block;
-  font-size: 0.9rem;
-  color: #0B0C10;
+  font-size: 0.8rem;
+  color: #0E203B;
   padding: 0.25rem;
 }
 form.myForm h3 {
-  font-size: 1rem;
-  color: #0E203B; /* Dark blue section headers */
+  font-size: 0.9rem;
+  color: #89722F;
   margin: 1.5rem 0 0.25rem 0;
   border-bottom: 1px solid #eee;
 }
@@ -428,52 +448,50 @@ form.myForm select {
   margin: 0.1rem 0 1rem 0;
   padding: 0.5rem 10px;
   font-size: 1rem;
-  color: #0B0C10;
+  color: #444;
   width: 250px;
   border: 1px solid #999;
   border-radius: 3px;
-  background-color: #ffffff;
 }
 form.myForm input[type=submit] {
   border: none;
   border-radius: 10px;
-  background-color: #0E203B; /* Dark blue button */
+  background-color: #0E203B;
   font-weight: 700;
-  color: #ffffff;
+  color: white;
   padding: 1rem;
-  appearance: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
 }
 form.myForm input:required {
-  border: 1px solid #FF0033; /* Red for required fields */
+  border: 1px solid #ff0033;
 }
 form.myForm input:focus {
-  border: 3px solid #0E203B; /* Dark blue focus */
+  border: 3px solid #ccc;
 }
 form.myForm input:required:valid {
-  border: 1px solid #0E203B; /* Dark blue valid field */
+  border: 1px solid #89722F;
 }
 
 /* --------------------------- FOOTER --------------------------- */
 #footerWrapper {
-  background-color: #ffffff;
-  border-top: 2px solid #0E203B; /* Dark blue accent */
+  background-color: #ebda19;
 }
 
 footer {
   font-size: 0.85rem;
   padding: 1rem 10px;
-  color: #0B0C10;
+  color: black;
   text-align: center;
   line-height: 150%;
 }
 footer a {
-  color: #0E203B; /* Dark blue links */
+  color: #ccc;
 }
 
-/* --------------------------- MEDIA QUERIES --------------------------- */
 @media only screen and (min-width: 35rem) {
+  /* NAVIGATION STUFF GOES HERE  */
   body {
     display: block;
   }
@@ -482,11 +500,10 @@ footer a {
   }
   #top a.logo {
     display: block;
-    color: #0B0C10;
   }
   nav {
     height: auto;
-    border-bottom: 2px solid #0E203B; /* Dark blue */
+    border-bottom: 2px solid #ccc;
   }
   nav ul {
     display: flex;
@@ -496,12 +513,12 @@ footer a {
     border: none;
   }
   nav li a:hover {
-    background-color: #f9f9f9;
-    color: #0E203B; /* Dark blue hover */
+    background-color: #eee;
   }
   nav li.active a {
-    text-decoration: underline 3px;
-    color: #0E203B; /* Dark blue */
+    -webkit-text-decoration: underline 3px;
+            text-decoration: underline 3px;
+    color: #89722F;
     text-decoration-color: #0E203B;
   }
 }
@@ -513,9 +530,10 @@ footer a {
   header {
     margin-bottom: 1.2rem;
   }
+  /* NAVIGATION STUFF GOES HERE  */
   nav {
     height: auto;
-    border-bottom: 2px solid #0E203B; /* Dark blue */
+    border-bottom: 2px solid #ccc;
   }
   nav ul {
     display: flex;

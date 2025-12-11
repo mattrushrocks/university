@@ -25,140 +25,171 @@
 </head>
 <body>
 
-    <div id="headerWrapper">
-    <header>
-        <figure class="logo">
-            <img src="images/logo-1x.png" alt="header-logo" width="45" height="50"
-            srcset="images/logo-1x.png 1x, images/logo-2x.png 2x, images/logo-3x.png 3x">
-        </figure>
+<div id="headerWrapper">
+  <header>
+    <figure class="logo">
+      <img src="images/logo-1x.png" alt="header-logo" width="45" height="50"
+        srcset="images/logo-1x.png 1x, images/logo-2x.png 2x, images/logo-3x.png 3x">
+    </figure>
     <span>University Application</span>
+    <!-- Hamburger menu trigger -->
+    <a href="#navlinks" class="hamburger">&#9776;</a>
   </header>
 </div>
 
+
 <div id="navWrapper">
-  <nav>
-    <ul>
-      <li class="active"><a href="#">Home</a></li>
-      <li><a href="#">Admissions</a></li>
-      <li><a href="#">Programs</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</div>
-<div id="mainWrapper"></div>
-<main>
-  <h1>Student Information Form</h1>
-  <form method="GET" action="thanks.html" class="myForm" autocomplete="on">
+      <nav id="navlinks">
+        <a href="#top">&#10005;</a>
+        <ul>
+            <li class="active"><a href="#">Admissions</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Faculty</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <!-- end nav wrapper -->
 
-  
+    <div id="mainWrapper">
+      <main>
+        <h1>University Admissions</h1>
+        
+        <form
+          method="get"
+          action="thanks.html"
+          class="myForm"
+          autocomplete="on"
+        >
+        <h3>Personal Information</h3>
+          <label
+            >First Name:
+            <input
+              type="text"
+              name="fname"
+              autocomplete="given-name"
+              required
+              title="First Name Here"
+          /></label>
+          <label
+            >Last Name:
+            <input
+              type="text"
+              name="lname"
+              autocomplete="family-name"
+              required
+              title="Last Name Here"
+          /></label>
+          <label
+            >E-mail:
+            <input
+              type="email"
+              name="email"
+              autocomplete="email"
+              required
+              title="Your E-mail Here"
+              placeholder="johnstudent@email.com"
+          /></label>
+          <label
+            >Phone Number:
+            <input
+              type="tel"
+              name="Phone"
+              autocomplete="tel"
+              required
+              title="Your Cell Phone Number"
+              placeholder="1234567890"
+          /></label>
+          <label
+            >Address:
+            <input
+              type="text"
+              name="Address"
+              autocomplete="address-line1"
+              title="Your street address"
+          /></label>
+          <label
+          >State:
+          <input
+            type="text"
+            name="State"
+            autocomplete="address-level1"
+            title="Your State"
+        /></label>
+        <label
+          >City:
+          <input
+            type="text"
+            name="City"
+            autocomplete="address-level2"
+            title="Your City"
+        /></label>
+        <label
+          >ZIP Code:
+          <input
+            type="text"
+            name="Zip"
+            autocomplete="postal-code"
+            title="Your ZIP Code"
+        /></label>
+          <h3>Communication Preference</h3>
+            <label>
+                <input type="radio" name="communication" value="email"> E-mail
+            </label>
+            <label>
+                <input type="radio" name="communication" value="text"> Text
+            </label>
+            <label>
+                <input type="radio" name="communication" value="mail"> Mail
+            </label>
+          
+        <h3>Previous School Information</h3>
+          <label> School Type:
+            <select name="school type">
+                <option value="No Selection Made">Please Select</option>
+                <option value="High School">High School</option>
+                <option value="4year">4 Year University</option>
+                <option value="2year">2 Year University</option>
+          </select>
+        </label>
+        <label>
+          Graduation Date:
+          <input
+            type="text"
+            name="graddate"
+            title="Your Graduation Date of the school listed above."
+            placeholder="mm/dd/yyyy"
+        /></label>
+        <h3>Education Completed</h3>
+            <label>
+                <input type="checkbox" name="ged"> GED
+            </label>
+            <label>
+                <input type="checkbox" name="highschool"> High School Diploma
+            </label> 
+            <label>
+                <input type="checkbox" name="associates"> Two Year Associates Degree
+            </label>
+            <h3>Create Login</h3>
+            <label>Username(5-10 Upper and Lowercase Letters ONLY)
+                <input type="text" required pattern="[A-Za-z]{5,10}"  title="Enter a username with 5-10 upper or lowercase letters ONLY">
+            </label>
+            <label>Password(6+ characters)
+                <input type="password" name="password" required minlength="6" title="Enter a password with 6+ characters">
+            </label>
+          <input type="submit" value="SEND APPLICATION" />
+        </form>
+      </main>
+    </div>
+    <!-- end main wrapper -->
 
-    <!-- Required Contact Inputs -->
-    <h3>Required Contact Information</h3>
-    <label>
-      First Name
-      <input type="text" name="firstName" required>
-    </label>
-    <label>
-      Last Name
-      <input type="text" name="lastName" required>
-    </label>
-    <label>
-      Cell Phone
-      <input type="tel" name="cellPhone" required>
-    </label>
-    <label>
-      Email
-      <input type="email" name="email" required>
-    </label>
-
-    <!-- Optional Contact Inputs -->
-    <h3>Optional Contact Information</h3>
-    <label>
-      Address
-      <input type="text" name="address">
-    </label>
-    <label>
-      City
-      <input type="text" name="city">
-    </label>
-    <label>
-      State
-      <input type="text" name="state">
-    </label>
-    <label>
-      Zip
-      <input type="number" name="zip">
-    </label>
-
-    <!-- Communication Preferences -->
-    <h3>Communication Preferences</h3>
-    <label>
-      <input type="radio" name="communication" value="email"> Email
-    </label>
-    <label>
-      <input type="radio" name="communication" value="phone"> Phone
-    </label>
-    <label>
-      <input type="radio" name="communication" value="mail"> Mail
-    </label>
-
-    <!-- Previous School Dropdown -->
-    <h3>Previous School</h3>
-    <label>
-      Select School
-      <select name="previousSchool">
-        <option value="">--Choose One--</option>
-        <option value="schoolA">School A</option>
-        <option value="schoolB">School B</option>
-        <option value="schoolC">School C</option>
-      </select>
-    </label>
-
-    <!-- High School Graduation Date -->
-    <h3>High School Graduation Date</h3>
-    <label>
-      Graduation Date
-      <input type="date" name="gradDate">
-    </label>
-
-    <!-- Education Completed Checkboxes -->
-    <h3>Education Completed</h3>
-    <label>
-      <input type="checkbox" name="education" value="hsDiploma"> High School Diploma
-    </label>
-    <label>
-      <input type="checkbox" name="education" value="associate"> Associate Degree
-    </label>
-    <label>
-      <input type="checkbox" name="education" value="bachelor"> Bachelor’s Degree
-    </label>
-    <label>
-      <input type="checkbox" name="education" value="master"> Master’s Degree
-    </label>
-
-    <!-- Username with Pattern -->
-    <h3>Account Information</h3>
-    <label>
-      Username (5–10 letters)
-      <input type="text" name="username" pattern="[A-Za-z]{5,10}" required>
-    </label>
-
-    <!-- Password -->
-    <label>
-      Password (min 6 characters)
-      <input type="password" name="password" minlength="6" required>
-    </label>
-
-    <!-- Submit Button -->
-    <input type="submit" value="Submit Application">
-  </form>
-</main>
-
-<div id="footerWrapper">
-  <footer>
-    <p>&copy; 2025 Matt Rushforth</p>
-  </footer>
-</div>
-
-</body>
+    <div id="footerWrapper">
+      <footer>
+        <p>
+          Copyright &copy; 2025 &bull; Matt Rushforth
+        </p>
+      </footer>
+    </div>
+    <!-- end footer wrapper -->
+  </body>
 </html>
